@@ -1,0 +1,95 @@
+.live-list {
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.live-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.export-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+}
+
+.export-button:hover {
+  background: linear-gradient(135deg, #00a08b, #86b92d);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.live-list table {
+  min-width: 800px;
+}
+
+.live-list td {
+  vertical-align: middle;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.item-count {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-button {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+}
+
+.save-button {
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+}
+
+.cancel-button {
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
+}
+
+.editing-row input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.editing-row input:focus {
+  border-color: #2193b0;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(33, 147, 176, 0.1);
+}
+
+@media (max-width: 768px) {
+  .live-list {
+    padding: 1rem;
+  }
+  
+  .live-list-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

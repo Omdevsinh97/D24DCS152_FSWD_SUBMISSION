@@ -1,0 +1,217 @@
+.wash-status {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.wash-status-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.wash-status-header h2 {
+  font-size: 2rem;
+  color: #1F2937;
+  margin-bottom: 0.5rem;
+}
+
+.wash-status-header p {
+  color: #6B7280;
+}
+
+.status-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.status-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.status-card:hover {
+  transform: translateY(-5px);
+}
+
+.pending-wash {
+  background: linear-gradient(135deg, #ffffff 0%, #FEF3C7 100%);
+  border: 1px solid #FDE68A;
+}
+
+.in-progress {
+  background: linear-gradient(135deg, #ffffff 0%, #EFF6FF 100%);
+  border: 1px solid #BFDBFE;
+}
+
+.completed {
+  background: linear-gradient(135deg, #ffffff 0%, #ECFDF5 100%);
+  border: 1px solid #A7F3D0;
+}
+
+.status-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.5rem;
+}
+
+.pending-wash .status-icon {
+  background: linear-gradient(135deg, #D97706 0%, #FBBF24 100%);
+  color: white;
+}
+
+.in-progress .status-icon {
+  background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+  color: white;
+}
+
+.completed .status-icon {
+  background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+  color: white;
+}
+
+.status-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.pending-wash .status-value {
+  color: #D97706;
+}
+
+.in-progress .status-value {
+  color: #2563EB;
+}
+
+.completed .status-value {
+  color: #059669;
+}
+
+.status-label {
+  color: #6B7280;
+  font-size: 0.875rem;
+}
+
+.wash-list {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.wash-list h3 {
+  color: #1F2937;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-badge.pending {
+  background-color: #FEF3C7;
+  color: #D97706;
+}
+
+.status-badge.washing {
+  background-color: #EFF6FF;
+  color: #2563EB;
+}
+
+.status-badge.completed {
+  background-color: #ECFDF5;
+  color: #059669;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn.wash-btn {
+  background-color: #EFF6FF;
+  color: #2563EB;
+  border: 1px solid #BFDBFE;
+}
+
+.action-btn.wash-btn:hover {
+  background-color: #2563EB;
+  color: white;
+}
+
+.wash-status table {
+  min-width: 800px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+}
+
+.item-tag {
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.wash-button {
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.wash-button:hover {
+  background: linear-gradient(135deg, #00a08b, #86b92d);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .wash-status {
+    padding: 1rem;
+  }
+  
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
