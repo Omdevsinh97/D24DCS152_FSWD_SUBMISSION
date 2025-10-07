@@ -1,0 +1,5 @@
+- [x] Update package.json: add Express dependency and change start script to "node app.js"
+- [x] Create app.js: Express server to serve static files from public, listen on port 3000
+- [x] Create public/index.html: HTML page with counter display, + , - , reset buttons, JS for logic with localStorage, responsive CSS
+- [ ] Install dependencies with npm install
+- [ ] Run the server and test in browser

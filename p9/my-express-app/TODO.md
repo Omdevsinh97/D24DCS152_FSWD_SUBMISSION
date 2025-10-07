@@ -1,0 +1,4 @@
+- [x] Create src/app.js to set up Express app, import routes, and listen on port 3000
+- [x] Create src/controllers/homeController.js with getHome function to send 'Welcome to our site'
+- [x] Run npm install to ensure dependencies are installed
+- [ ] Run npm start to test the server

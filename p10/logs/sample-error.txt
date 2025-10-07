@@ -1,0 +1,7 @@
+2025-08-19T12:00:03.251Z ERROR [AuthService] Failed login attempt for user admin (invalid password)
+2025-08-19T12:00:04.019Z WARN  [AuthService] User admin locked out due to multiple failures
+2025-08-19T12:05:43.812Z ERROR [DB] Connection timeout after 5000ms
+Stack: TimeoutError: Connection timed out
+    at DB.connect (/app/db.js:42:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-08-19T12:05:44.100Z INFO  [DB] Retrying connection (1/3)

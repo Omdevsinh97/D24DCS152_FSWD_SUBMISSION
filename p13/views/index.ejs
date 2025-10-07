@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Calculator</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Income Calculator</h1>
+        <form action="/calculate" method="POST">
+            <div class="form-group">
+                <label for="income1">Income Source 1:</label>
+                <input type="text" id="income1" name="income1" required>
+            </div>
+            <div class="form-group">
+                <label for="income2">Income Source 2:</label>
+                <input type="text" id="income2" name="income2" required>
+            </div>
+            <button type="submit">Calculate Total Income</button>
+        </form>
+        <% if (error) { %>
+            <p class="error"><%= error %></p>
+        <% } %>
+    </div>
+</body>
+</html>

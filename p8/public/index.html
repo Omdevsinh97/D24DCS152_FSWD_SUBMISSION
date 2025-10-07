@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Rep Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .counter {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 300px;
+            width: 100%;
+        }
+        .count {
+            font-size: 4rem;
+            margin: 20px 0;
+            color: #333;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        button {
+            font-size: 2rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .increase {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .increase:hover {
+            background-color: #45a049;
+        }
+        .decrease {
+            background-color: #f44336;
+            color: white;
+        }
+        .decrease:hover {
+            background-color: #da190b;
+        }
+        .reset {
+            background-color: #2196F3;
+            color: white;
+        }
+        .reset:hover {
+            background-color: #0b7dda;
+        }
+        @media (max-width: 600px) {
+            .count {
+                font-size: 3rem;
+            }
+            button {
+                font-size: 1.5rem;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="counter">
+        <h1>Gym Rep Counter</h1>
+        <div class="count" id="count">0</div>
+        <div class="buttons">
+            <button class="decrease" id="decrease">-</button>
+            <button class="reset" id="reset">Reset</button>
+            <button class="increase" id="increase">+</button>
+        </div>
+    </div>
+
+    <script>
+        let count = parseInt(localStorage.getItem('repCount')) || 0;
+        const countDisplay = document.getElementById('count');
+        const increaseBtn = document.getElementById('increase');
+        const decreaseBtn = document.getElementById('decrease');
+        const resetBtn = document.getElementById('reset');
+
+        function updateDisplay() {
+            countDisplay.textContent = count;
+            localStorage.setItem('repCount', count);
+        }
+
+        increaseBtn.addEventListener('click', () => {
+            count++;
+            updateDisplay();
+        });
+
+        decreaseBtn.addEventListener('click', () => {
+            if (count > 0) {
+                count--;
+                updateDisplay();
+            }
+        });
+
+        resetBtn.addEventListener('click', () => {
+            count = 0;
+            updateDisplay();
+        });
+
+        updateDisplay(); // Initialize display
+    </script>
+</body>
+</html>
