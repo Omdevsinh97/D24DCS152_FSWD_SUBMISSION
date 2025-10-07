@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Weather App</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+    body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #4b0082, #00bfff);
+    margin-top: 80px;
+    color: white;
+}
+
+.container {
+    background: linear-gradient(to right, #9602ff, #39c1ef);
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius:10cm;
+    border: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background:#9403fc;
+    border-radius:10cm;
+    color: #ffffff;
+    border: none;
+
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+</style>
+<body>
+
+    <div class="container">
+        <h1>Simple Weather App</h1>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="getWeatherBtn">Get Weather</button>
+
+        <div class="result" id="weatherResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    // Hardcoded weather data for cities
+const weatherData = {
+    'ahmedabad': '25°C, Sunny',
+    'anand': '20°C, Cloudy',
+    'vadoadara': '30°C, Clear',
+    'junagadh': '22°C, Partly Cloudy',
+    'rajkot': '35°C, Hot',
+    'mumbai': '32°C, Humid',
+    'surat': '20°C, Rainy',
+    'dubai': '40°C, Very Hot'
+};
+
+// Get DOM elements
+const getWeatherBtn = document.getElementById('getWeatherBtn');
+const cityInput = document.getElementById('cityInput');
+const weatherResult = document.getElementById('weatherResult');
+
+// Add event listener to the button
+getWeatherBtn.addEventListener('click', () => {
+    const city = cityInput.value.trim().toLowerCase();
+
+    if (weatherData[city]) {
+        weatherResult.textContent = `Weather in ${capitalize(city)}: ${weatherData[city]}`;
+    } else {
+        weatherResult.textContent = 'Weather data not found for the entered city.';
+    }
+});
+
+// Helper function to capitalize first letter
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+</script>
+</html>
