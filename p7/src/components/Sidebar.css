@@ -1,0 +1,115 @@
+/* Sidebar.css
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0px;
+  left: -200px; 
+  width: 200px;
+  height: 100%;
+  background: radial-gradient(circle, #504f50, #161616);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  transition: left 0.3s ease;
+}
+
+.sidebar.open {
+    padding-top: 100px;
+  left: 0; 
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+.content {
+  margin-left: 0;
+  padding: 20px;
+} */
+/* Existing sidebar styles */
+
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #2a2a2a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.toggle-btn:hover {
+  background-color: #555;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -200px; /*Hide sidebar initially */
+  width: 160px;
+  height: 100%;
+  background: radial-gradient(circle, #504f50, #161616);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: left 0.3s ease;
+}
+
+.sidebar.open {
+    padding-top: 100px;
+  left: 0; /* Show sidebar when open */
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+.search-input {
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.no-result {
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.content {
+  margin-left: 0;
+  padding: 10px;
+}
